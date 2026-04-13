@@ -15,5 +15,19 @@ All models are fine‑tuned on **Tiny ImageNet** (200 classes) and tested agains
 
 Both notebooks share the same training pipeline, data preparation, reproducibility artifacts (JSON manifests, environment snapshots, git provenance), and automatic synchronisation to GitHub (optional).
 
+## Configuration Highlights
+
+You can modify the shared configuration dictionary (`CONFIG_SHARED`) at the beginning of each notebook:
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `batch_size` | 64 | Training / validation batch size |
+| `num_epochs` | 10 | Fine‑tuning epochs for FP32 |
+| `qat_num_epochs` | 10 | Fine‑tuning epochs for QAT (after prepare) |
+| `adv_epsilon` | 0.01 | PGD attack strength during adversarial training |
+| `epsilons` | `[0.001,0.005,0.01,0.03,0.05]` | L∞ perturbation budgets for evaluation |
+| `autoattack_budget` | `'tiny'` | Speed/accuracy trade‑off for AutoAttack |
+| `run_baseline_no_adv` | `True` | Also run the non‑adversarial training series |
+| `hybrid_quantize_blocks` | `(6, 12)` | Transformer block indices to quantise (0‑based) |
 ---
 
