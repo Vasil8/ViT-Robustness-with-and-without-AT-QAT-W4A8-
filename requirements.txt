@@ -1,0 +1,21 @@
+# Notebook 1 Quantized-ViT-Robustness_W4A8_AutoAttack.
+# Notebook 2 Quantized-ViT-Robustness_W4A8_FGSM.
+# PyTorch: https://pytorch.org/get-started/locally/
+
+# Part 1
+autoattack @ git+https://github.com/fra31/auto-attack.git
+
+torch>=2.2.0
+torchvision>=0.17.0
+timm>=0.9.0
+torchao>=0.4.0
+
+# Part 2
+foolbox>=3.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+Pillow>=9.0.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
