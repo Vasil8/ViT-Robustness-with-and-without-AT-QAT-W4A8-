@@ -29,5 +29,13 @@ You can modify the shared configuration dictionary (`CONFIG_SHARED`) at the begi
 | `autoattack_budget` | `'tiny'` | Speed/accuracy trade‑off for AutoAttack |
 | `run_baseline_no_adv` | `True` | Also run the non‑adversarial training series |
 | `hybrid_quantize_blocks` | `(6, 12)` | Transformer block indices to quantise (0‑based) |
+
+## Citing / Acknowledgements
+
+- ViT weights: `vit_small_patch16_224.augreg_in21k_ft_in1k` from [timm](https://github.com/huggingface/pytorch-image-models)
+- QAT: [torchao](https://github.com/pytorch/ao)
+- Attacks: [AutoAttack](https://github.com/fra31/auto-attack) and [Foolbox](https://github.com/bethgelab/foolbox)
+- Dataset: Stanford Tiny ImageNet
+
 ---
 
